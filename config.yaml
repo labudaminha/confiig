@@ -25,7 +25,7 @@ proxies:
 proxy-providers:
   AC-INDONESIA:
     type: http
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/proxy_provider/ACC_Config_ID.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_ID.yaml"
     interval: 3600
     health-check:
       enable: true
@@ -33,7 +33,7 @@ proxy-providers:
       interval: 120
   AC-SINGAPURA:
     type: http
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/proxy_provider/ACC_Config_SG.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_SG.yaml"
     interval: 3600
     health-check:
       enable: true
@@ -41,7 +41,7 @@ proxy-providers:
       interval: 120
   AC-MIX-UDP:
     type: http
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/proxy_provider/ACC_Config_UDP.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_UDP.yaml"
     interval: 3600
     health-check:
       enable: true
@@ -530,104 +530,104 @@ rule-providers:
   SANZ-AdBlock:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-AdBlock.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-AdBlock.yaml"
     interval: 3600
   SANZ-AdAway:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-AdAway.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-AdAway.yaml"
     interval: 3600
   SANZ-BlockOSUpdate:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-BlockOSUpdate.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-BlockOSUpdate.yaml"
     interval: 3600
   SANZ-NSFW:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-NSFW18+.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-NSFW18%2B.yaml"
     interval: 3600
   SANZ-Conference:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Conference.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Conference.yaml"
     interval: 3600
   SANZ-Discord:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Discord.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Discord.yaml"
     interval: 3600
   SANZ-SpeedTest:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-SpeedTest.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-SpeedTest.yaml"
     interval: 3600
   SANZ-SocialMedia:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-SocialMedia.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-SocialMedia.yaml"
     interval: 3600
   SANZ-Netflix:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Netflix.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Netflix.yaml"
     interval: 3600
   SANZ-Spotify:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Spotify.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Spotify.yaml"
     interval: 3600
   SANZ-Streaming:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Streaming.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Streaming.yaml"
     interval: 3600
   SANZ-MarketBankETC:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-MarketBankETC.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-MarketBank.yaml"
     interval: 3600
 #> Game Addon
   SANZ-PUBGM:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-PUBG.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-PUBG.yaml"
     interval: 3600
   SANZ-MLBB:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-MLBB.yaml"
+    url: "https://github.com/labudaminha/confiig/blob/main/rule_provider/SANZ-MLBB.yaml"
     interval: 3600
   SANZ-WutheringWaves:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-WutheringWaves.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-WutheringWaves.yaml"
     interval: 3600
   SANZ-Hoyolab:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-Hoyolab.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Hoyolab.yaml"
     interval: 3600
   SANZ-OnlineGameMIX:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-ALLmixGAME.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-ALLmixGAME.yaml"
     interval: 3600
 #> Daily other
   SANZ-GoogleFamily:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-GoogleFamily.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-GoogleFamily.yaml"
     interval: 3600
   SANZ-WhatsApp:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-WhatsApp.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-WhatsApp.yaml"
     interval: 3600
   SANZ-OpenAI:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/SANZ-OpenAI.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-OpenAI.yaml"
     interval: 3600
     
             # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
