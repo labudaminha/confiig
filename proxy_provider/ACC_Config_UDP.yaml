@@ -1,38 +1,8 @@
-# Single akun
-# reformat di : sub.bonds.id
-# Gunakan Akun UDP untuk bisa support Game Online, Video Call WA, Streaming Film, Netflix dll ...
-# Beli Akun ditempat langganan masing-masing atau cari yg gratisan support UDP di Telegram 🗿
-# =========== PROXY ACCOUNT ===========
-proxies:
-  - name: UDP DewaID-XUTS 🇮🇩
-    server: 104.18.214.235
-    port: 443
-    type: vmess
-    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ava.game.naver.com.ikd.lolicon.biz.id
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: ava.game.naver.com.ikd.lolicon.biz.id
-    udp: true
-  - name: UDP DewaID-VIDIO 🇮🇩
-    server: 104.22.4.240
-    port: 443
-    type: vmess
-    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: quiz.vidio.com.ikd.lolicon.biz.id
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: quiz.vidio.com.ikd.lolicon.biz.id
-    udp: true
+vmess://eyJhZGQiOiJjb2xsZWN0aW9uLmxpbmVmcmllbmRzLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiaHR0cC8xLjEiLCJmcCI6ImNocm9tZSIsImhvc3QiOiJjb2xsZWN0aW9uLmxpbmVmcmllbmRzLmNvbS51ZHAubGFidWRhbWluaGEud2ViLmlkIiwiaWQiOiIxNzYwZGM0ZC00ZWQ0LTRiOTctODIzNi1hM2Y1NWM4YjdlOGIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MtdWRwIiwicG9ydCI6IjQ0MyIsInBzIjoidWRwIGNvbGxlYyIsInNjeSI6ImF1dG8iLCJzbmkiOiJjb2xsZWN0aW9uLmxpbmVmcmllbmRzLmNvbS51ZHAubGFidWRhbWluaGEud2ViLmlkIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+vmess://eyJhZGQiOiJhdmEuZ2FtZS5uYXZlci5jb20iLCJhaWQiOiIwIiwiYWxwbiI6Imh0dHAvMS4xIiwiZnAiOiJjaHJvbWUiLCJob3N0IjoiYXZhLmdhbWUubmF2ZXIuY29tLnVkcC5sYWJ1ZGFtaW5oYS53ZWIuaWQiLCJpZCI6IjE3NjBkYzRkLTRlZDQtNGI5Ny04MjM2LWEzZjU1YzhiN2U4YiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy11ZHAiLCJwb3J0IjoiNDQzIiwicHMiOiJWTWVzcyB3c10gVExTIChmcmVlKSDinIUiLCJzY3kiOiJhdXRvIiwic25pIjoiYXZhLmdhbWUubmF2ZXIuY29tLnVkcC5sYWJ1ZGFtaW5oYS53ZWIuaWQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+vmess://eyJhZGQiOiJzdXBwb3J0Lnpvb20udXMiLCJhaWQiOiIwIiwiYWxwbiI6Imh0dHAvMS4xIiwiZnAiOiJjaHJvbWUiLCJob3N0Ijoic3VwcG9ydC56b29tLnVzLnVkcC5sYWJ1ZGFtaW5oYS53ZWIuaWQiLCJpZCI6IjE3NjBkYzRkLTRlZDQtNGI5Ny04MjM2LWEzZjU1YzhiN2U4YiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy11ZHAiLCJwb3J0IjoiNDQzIiwicHMiOiJ1ZHAgem9vbSIsInNjeSI6ImF1dG8iLCJzbmkiOiJzdXBwb3J0Lnpvb20udXMudWRwLmxhYnVkYW1pbmhhLndlYi5pZCIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiJhcGkubWlkdHJhbnMuY29tIiwiYWlkIjoiMCIsImFscG4iOiJodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6ImFwaS5taWR0cmFucy5jb20udWRwLmxhYnVkYW1pbmhhLndlYi5pZCIsImlkIjoiMTc2MGRjNGQtNGVkNC00Yjk3LTgyMzYtYTNmNTVjOGI3ZThiIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzLXVkcCIsInBvcnQiOiI0NDMiLCJwcyI6InVkcCBtaWR0cmFucyIsInNjeSI6ImF1dG8iLCJzbmkiOiJhcGkubWlkdHJhbnMuY29tLnVkcC5sYWJ1ZGFtaW5oYS53ZWIuaWQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+trojan://t.me%2Ffoolvpn@collection.linefriends.com:443/?type=ws&host=collection.linefriends.com.udp.labudaminha.web.id&path=%2Ftrojan-udp&security=tls&sni=collection.linefriends.com.udp.labudaminha.web.id#Trojan%20UDP%20collec
+trojan://t.me%2Ffoolvpn@ava.game.naver.com:443/?type=ws&host=ava.game.naver.com.udp.labudaminha.web.id&path=%2Ftrojan-udp&security=tls&sni=ava.game.naver.com.udp.labudaminha.web.id#Trojan%20UDP%20ava
+trojan://t.me%2Ffoolvpn@support.zoom.us:443/?type=ws&host=support.zoom.us.udp.labudaminha.web.id&path=%2Ftrojan-udp&security=tls&sni=support.zoom.us.udp.labudaminha.web.id#Trojan%20UDP%20zoom
+trojan://t.me%2Ffoolvpn@api.midtrans.com:443/?type=ws&host=api.midtrans.com.udp.labudaminha.web.id&path=%2Ftrojan-udp&security=tls&sni=api.midtrans.com.udp.labudaminha.web.id#Trojan%20UDP%20midtrans
