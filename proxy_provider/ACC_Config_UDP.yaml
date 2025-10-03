@@ -1,0 +1,38 @@
+# Single akun
+# reformat di : sub.bonds.id
+# Gunakan Akun UDP untuk bisa support Game Online, Video Call WA, Streaming Film, Netflix dll ...
+# Beli Akun ditempat langganan masing-masing atau cari yg gratisan support UDP di Telegram 🗿
+# =========== PROXY ACCOUNT ===========
+proxies:
+  - name: UDP DewaID-XUTS 🇮🇩
+    server: 104.18.214.235
+    port: 443
+    type: vmess
+    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ava.game.naver.com.ikd.lolicon.biz.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: ava.game.naver.com.ikd.lolicon.biz.id
+    udp: true
+  - name: UDP DewaID-VIDIO 🇮🇩
+    server: 104.22.4.240
+    port: 443
+    type: vmess
+    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: quiz.vidio.com.ikd.lolicon.biz.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: quiz.vidio.com.ikd.lolicon.biz.id
+    udp: true
