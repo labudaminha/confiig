@@ -1,1 +1,668 @@
 
+tproxy-port: 9898
+port: 7890
+redir-port: 9797
+socks-port: 7893
+proxy-port: 9898
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+external-ui: ./dashboard
+tcp-concurrent: true  
+ipv6: false
+proxies:
+  - name: "WARP+"
+    type: http
+    server: 127.0.0.1
+    port: 8086
+  
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+            
+proxy-providers:
+  AC-INDONESIA:
+    type: http
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_ID.yaml"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+  AC-SINGAPURA:
+    type: http
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_SG.yaml"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+  AC-MIX-UDP:
+    type: http
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_UDP.yaml"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+            
+# ⫘⫘⫘⫘⫘ ANOTHER CLASH SETTINGS ⫘⫘⫘⫘⫘
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - +.v2ex.com
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - 80
+    - 443
+
+tun:
+  enable: false
+  mtu: 9000
+  device: utun
+  stack: system # system / gvisor / system / lwip
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  strict-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  include-android-user: [0, 10]
+  exclude-package: []
+  include-package: []
+dns:
+  enable: true
+  prefer-h3: true
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  listen: 0.0.0.0:7874
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - "+.qq.com"
+  - "+.tencent.com"
+  - na.b.g-tun.com
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
+  - local.adguard.org
+  - "+.sandai.net"
+  - "+.n0808.com"
+  nameserver:
+    - 'https://8.8.8.8/dns-query#ecs=223.5.5.0/24&ecs-override=true'
+    - 'https://1.1.1.1/dns-query#ecs=223.5.5.0/24&ecs-override=true'
+  fallback:
+    - https://dns.google/dns-query#UMUM
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  proxy-server-nameserver:
+    - 104.22.4.240 #IP VIDIO
+    - 104.22.5.240 #IP VIDIO
+    - 104.17.156.243 #IP VIDIO
+    - 104.17.157.243 #IP VIDIO
+    - 104.17.158.243 #IP VIDIO
+    - 104.17.159.243 #IP VIDIO
+    - 104.17.71.206 #IP VIDIO
+    - 104.17.72.206 #IP VIDIO
+    - 104.17.73.206 #IP VIDIO
+    - 104.17.74.206 #IP VIDIO
+    - 172.64.32.202 #IP VIDIO
+    - 104.18.38.43 #IP VIU
+    - 172.64.149.213 #IP VIU
+    - 104.17.241.25 #IP NETFLIX
+    - 104.17.237.25 #IP NETFLIX
+    - 170.114.45.6 #IP XCV
+    - 170.114.46.6 #IP XCV
+    - 104.18.213.235 #IP XCV
+    - 104.18.214.235 #IP XCV
+    - 112.215.203.246 #DNS XL
+    - 112.215.203.247 #DNS XL
+    - 112.215.203.248 #DNS XL
+    - 112.215.203.254 #DNS XL
+    - 112.215.198.248 #DNS XL
+    - 112.215.198.254 #DNS XL
+    - '[2400:9800:2:2::245]' #DNS XL
+    - '[2400:9800:2:2::246]' #DNS XL
+  fallback-filter:
+    geoip: true
+    geoip-code: ID
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+    - "+.googlevideo.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+    - "+.*"
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+            
+# ⫘⫘⫘⫘⫘ Account Selector  ⫘⫘⫘⫘⫘
+proxy-groups: 
+- name: 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  type: select
+  disable-udp: false
+  use:
+  - AC-INDONESIA
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  type: select
+  disable-udp: false
+  use:
+  - AC-SINGAPURA
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  type: select
+  disable-udp: false
+  use:
+  - AC-MIX-UDP
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+  
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+            
+# ⫘⫘⫘⫘⫘ MAIN-ProxyGroup ⫘⫘⫘⫘⫘
+- name: UMUM
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍Block Ads ⚠️
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍Block OS Update ♻️
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 🎯MobileLegends🎮
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 🎯PUBG Mobile🎮
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 🎯HoyoverseMixGAME🎮
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 🎯OnlineGamesMIX🎮
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍SpeedTest ⚡
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍SocialMediaNet 💬
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍StreamingALL 🎬
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍Market-Bank-ETC 💸
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍ConferenceMEET 📹
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍GoogleFAMILY 🪩
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍Netflix 🎬
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+- name: 📍WhatsApp 💌
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - DIRECT
+  - BALANCE
+  - 💠 𝕀𝕟𝕕𝕠ℕ𝔼𝕋 💠
+  - 💠 𝕊𝕚𝕟𝕘𝕒𝕡𝕠𝕣𝕖ℕ𝔼𝕋 💠
+  - 🌟 𝕌𝔻ℙ-ℕ𝕖𝕥+ 🌟
+  url: http://www.gstatic.com/generate_204
+  interval: '180'
+
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+
+# ⫘⫘⫘⫘⫘ Balancing ⫘⫘⫘⫘⫘
+- name: BALANCE
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AC-INDONESIA
+  - AC-SINGAPURA
+  - AC-MIX-UDP
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: FALLBACK
+  type: fallback
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AC-INDONESIA
+  - AC-SINGAPURA
+  - AC-MIX-UDP
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: BEST-PING
+  type: url-test
+  use:
+  - AC-INDONESIA
+  - AC-SINGAPURA
+  - AC-MIX-UDP
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+  
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+  
+# ⫘⫘⫘⫘⫘ Rule Provider ⫘⫘⫘⫘⫘
+rule-providers:
+  DIRECT:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/NAMA_PENGGUNA/NAMA_REPO/NAMA_BRANCH/rule_provider/DIRECT.yaml"
+    interval: 3600
+  SANZ-AdBlock:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-AdBlock.yaml"
+    interval: 3600
+  SANZ-AdAway:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-AdAway.yaml"
+    interval: 3600
+  SANZ-BlockOSUpdate:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-BlockOSUpdate.yaml"
+    interval: 3600
+  SANZ-NSFW:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-NSFW18%2B.yaml"
+    interval: 3600
+  SANZ-Conference:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Conference.yaml"
+    interval: 3600
+  SANZ-Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Discord.yaml"
+    interval: 3600
+  SANZ-SpeedTest:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-SpeedTest.yaml"
+    interval: 3600
+  SANZ-SocialMedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-SocialMedia.yaml"
+    interval: 3600
+  SANZ-Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Netflix.yaml"
+    interval: 3600
+  SANZ-Spotify:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Spotify.yaml"
+    interval: 3600
+  SANZ-Streaming:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Streaming.yaml"
+    interval: 3600
+  SANZ-MarketBankETC:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-MarketBank.yaml"
+    interval: 3600
+#> Game Addon
+  SANZ-PUBGM:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-PUBG.yaml"
+    interval: 3600
+  SANZ-MLBB:
+    type: http
+    behavior: classical
+    url: "https://github.com/labudaminha/confiig/blob/main/rule_provider/SANZ-MLBB.yaml"
+    interval: 3600
+  SANZ-WutheringWaves:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-WutheringWaves.yaml"
+    interval: 3600
+  SANZ-Hoyolab:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-Hoyolab.yaml"
+    interval: 3600
+  SANZ-OnlineGameMIX:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-ALLmixGAME.yaml"
+    interval: 3600
+#> Daily other
+  SANZ-GoogleFamily:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-GoogleFamily.yaml"
+    interval: 3600
+  SANZ-WhatsApp:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-WhatsApp.yaml"
+    interval: 3600
+  SANZ-OpenAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/rule_provider/SANZ-OpenAI.yaml"
+    interval: 3600
+    
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+
+# ⫘⫘⫘⫘⫘ RuleSet-PisahTrafik ⫘⫘⫘⫘⫘
+# Jika ingin menambah Rule/Edit Manual masukin sendiri aja (Cek di Folder Rule Provider)
+# Jika dirasa terlalu banyak Rule dan Penggunaan Memory/CPU Usage besar (HP Kentang) 🥔 coba hapus saja Rule NSFW 🔞 dan Rule Ads ⚠️ atau hapus Rule yg tidak diperlukan ✔️
+
+rules:
+- IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- IP-CIDR,28.0.0.1/8,REJECT,no-resolve
+- IP-CIDR6,::1/128,REJECT,no-resolve
+- RULE-SET,SANZ-AdBlock,📍Block Ads ⚠️
+- RULE-SET,SANZ-BlockOSUpdate,📍Block OS Update ♻️
+- RULE-SET,SANZ-SpeedTest,📍SpeedTest ⚡
+- RULE-SET,SANZ-SocialMedia,📍SocialMediaNet 💬
+- RULE-SET,SANZ-MarketBankETC,📍Market-Bank-ETC 💸
+- PROCESS-NAME,com.openai.chatgpt,WARP+
+#> Addon Streaming & Music
+- RULE-SET,SANZ-Netflix,📍Netflix 🎬
+- RULE-SET,SANZ-Streaming,📍StreamingALL 🎬
+#> Game Addon
+- RULE-SET,SANZ-OnlineGameMIX,🎯OnlineGamesMIX🎮
+#> Game Utama
+- RULE-SET,SANZ-MLBB,🎯MobileLegends🎮
+- RULE-SET,SANZ-PUBGM,🎯PUBG Mobile🎮
+- RULE-SET,SANZ-Hoyolab,🎯HoyoverseMixGAME🎮
+#> Daily
+- RULE-SET,SANZ-WhatsApp,📍WhatsApp 💌
+- RULE-SET,SANZ-GoogleFamily,📍GoogleFAMILY 🪩
+- RULE-SET,SANZ-Conference,📍ConferenceMEET 📹
+- RULE-SET,SANZ-OpenAI,UMUM
+- MATCH,UMUM
+
+            # ᯤ ℚ𝕪𝕦𝕓𝕚𝕤𝕒𝕟𝕫𝟙𝟜 𝕍ℙℕજ⁀➴ 🗽⃢⃢🗿
+
