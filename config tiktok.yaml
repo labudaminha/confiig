@@ -33,7 +33,7 @@ proxy-providers:
       interval: 120
   AC-SINGAPURA:
     type: http
-    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/ACC_Config_SG.yaml"
+    url: "https://raw.githubusercontent.com/labudaminha/confiig/refs/heads/main/proxy_provider/SG%20TK.yaml"
     interval: 3600
     health-check:
       enable: true
